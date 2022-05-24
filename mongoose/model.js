@@ -1,7 +1,7 @@
 module.exports = (function(){
   const mongoose = require('mongoose');
-  const URI = process.env.MONGO_URI || "localhost"; // your mongodb uri
-  const DB = process.env.MONGO_DB || "mongoose"; // your db
+  const URI = process.env.MONGO_URI || "localhost:27017"; // your mongodb uri
+  const DB = process.env.MONGO_DB || "express-graphql-example"; // your db
 
   const db = mongoose.connection;
   db.on('error', console.error);
